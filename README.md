@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # NgLibraryManagementApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
@@ -30,3 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # NgLibrary-Management-App
 Angular Library Management Application
 >>>>>>> 49919b2d1f93c890df5e5fbb9b7e30f9f3252525
+=======
+# NgLibrary-Management-App
+Angular Library Management App
+>>>>>>> 81c1ea987ab6250a8fd12598db1ae3cb80e72850
