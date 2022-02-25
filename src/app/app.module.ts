@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { LibraryAppComponent } from './library-app.component';
+import { LibraryCarouselComponent } from './library/library-carousel/library-carousel.component';
 import { LibraryDashboardComponent } from './library/library.component';
 import { NavBarComponent } from './nav/navbar.component';
 
@@ -9,7 +10,8 @@ import { NavBarComponent } from './nav/navbar.component';
   declarations: [
     LibraryAppComponent,
     NavBarComponent,
-    LibraryDashboardComponent
+    LibraryDashboardComponent,
+    LibraryCarouselComponent
   ],
   imports: [
     BrowserModule
