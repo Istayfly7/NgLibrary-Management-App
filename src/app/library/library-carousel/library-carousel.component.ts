@@ -16,6 +16,17 @@ import { Component } from "@angular/core";
                 </div>
             </div>
         </div>`
+        ,
+        styles: [`
+            .carousel {
+                border: solid;
+                border-width: 1px;
+            }
+
+            img {
+                height: 400px;
+            }
+        `]
 })
 export class LibraryCarouselComponent{
 

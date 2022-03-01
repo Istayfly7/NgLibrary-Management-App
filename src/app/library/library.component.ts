@@ -7,10 +7,15 @@ import { Component } from "@angular/core";
             <div class="row">
                 <library-carousel></library-carousel>
             </div>
-            <div class="row"></div>
+            <div class="row" style="margin-left: 110px;">
+                <div *ngFor="let card of cards" class="col-md-5" style="padding-top: 15px; padding-bottom: 5px;">
+                    <library-card [card]="card"></library-card>
+                </div>
+            </div>
         </div>
     `
 })
 export class LibraryDashboardComponent{
+    cards = ['Total Books', 'Books Available', 'Total Users']
     
 }
