@@ -18,9 +18,13 @@ import { Component } from "@angular/core";
         </div>`
         ,
         styles: [`
-            .carousel {
+            .carousel-inner {
                 border: solid;
                 border-width: 1px;
+            }
+
+            .carousel {
+                padding-top: 10px;
             }
 
             img {
