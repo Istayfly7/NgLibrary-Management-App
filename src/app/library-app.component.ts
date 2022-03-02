@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'library-app',
   template: `
       <nav-bar></nav-bar>
-      <library-dashboard></library-dashboard>
+      <router-outlet></router-outlet>
   `
 })
 export class LibraryAppComponent {
