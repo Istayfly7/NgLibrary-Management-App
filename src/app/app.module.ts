@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { LibraryAppComponent } from './library-app.component';
 import { LibraryAdminComponent } from './library/library-admin.component';
 import { LibraryCatalogComponent } from './library/library-catalog.component';
+import { CatalogTableComponent } from './library/library-catalog/catalog-table.component';
 import { LibraryCardComponent } from './library/library-dashboard/library-card/library-card.component';
 import { LibraryCarouselComponent } from './library/library-dashboard/library-carousel/library-carousel.component';
 import { LibraryDashboardComponent } from './library/library.component';
@@ -19,7 +20,8 @@ import { appRoutes } from './routes';
     LibraryCarouselComponent,
     LibraryCardComponent,
     LibraryCatalogComponent,
-    LibraryAdminComponent
+    LibraryAdminComponent,
+    CatalogTableComponent
   ],
   imports: [
     BrowserModule,
