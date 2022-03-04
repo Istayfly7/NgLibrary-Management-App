@@ -13,7 +13,13 @@ import { Component } from "@angular/core";
                 </div>
             </div>
         </div>
-    `
+    `,
+    styles: [`
+        library-carousel {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    `]
 })
 export class LibraryDashboardComponent{
     cards = ['Total Books', 'Books Available', 'Total Users']
