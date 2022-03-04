@@ -5,8 +5,7 @@ import { Component } from "@angular/core";
     templateUrl: './navbar.component.html',
     styles: [`
         .navbar-welcome {margin-left: 50%;}
-        .navbar {width: 1092px;
-                margin-left: 12px;}
+        nav {width: 100%;}
     `]
 })
 export class NavBarComponent {
