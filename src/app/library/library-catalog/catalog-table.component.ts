@@ -2,7 +2,12 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'catalog-table',
-    templateUrl: 'catalog-table.component.html'
+    templateUrl: 'catalog-table.component.html',
+    styles: [`
+        thead tr {
+            colspan: "4";
+        }
+    `]
 })
 export class CatalogTableComponent {
     books = [
