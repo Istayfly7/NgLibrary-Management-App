@@ -1,0 +1,20 @@
+<table class="table table-light table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Author</th>
+        <th scope="col">Title</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <th scope="row">{{book.id}}</th>
+        <td>{{book.author}}</td>
+        <td>{{book.title}}</td>
+        <td>
+          <button type="button" class="btn btn-dark btn-sm">Check Out</button>
+        </td>
+      </tr>
+    </tbody>
+</table>
