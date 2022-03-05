@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
     selector: 'nav-bar',
     templateUrl: './navbar.component.html',
     styles: [`
-        .navbar-welcome {margin-left: 50%;}
+        .navbar-welcome {margin-left: 60%;}
         nav {width: 100%;}
     `]
 })
