@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { AuthService } from "./auth.service";
 
 @Component({
     templateUrl: 'profile.component.html',
@@ -19,5 +20,5 @@ import { Component } from "@angular/core";
     `]
 })
 export class UserProfileComponent{
-
+    constructor(public authService:AuthService){}
 }
