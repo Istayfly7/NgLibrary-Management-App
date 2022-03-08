@@ -8,6 +8,10 @@ export const appRoutes:Routes = [
     {path: 'dashboard', component: LibraryDashboardComponent},
     {path: 'catalog', component: LibraryCatalogComponent},
     {path: 'admin', component: LibraryAdminComponent},
-    {path: 'profile', component: UserProfileComponent},
+    {
+        path: 'user',
+        loadChildren: () => import('./user/user.module')
+        .then(m => m.UserModule)
+    },
     {path: '', redirectTo: '/dashboard', pathMatch:'full'}
 ]
