@@ -10,7 +10,7 @@ import { Router } from "@angular/router";
         }
 
         form {
-            padding-top: 15px;
+            padding-top: 5px;
         }
 
         em {
@@ -23,7 +23,7 @@ import { Router } from "@angular/router";
 export class LoginComponent {
     username
     password
-    mouseoverLogin
+    mouseoverLogin: boolean
 
     constructor(private authService:AuthService, private router:Router){}
 

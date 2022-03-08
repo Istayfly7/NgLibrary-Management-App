@@ -1,4 +1,4 @@
-<h1>Login</h1>
+<h1 style="text-align: center;">Login</h1>
 <hr>
 <div class="col-md-4">
     <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
@@ -13,10 +13,10 @@
             <input (ngModel)="password" name="password" id="password" type="password" class="form-control" placeholder="Password..." required/>
         </div>
 
-        <span (mouseenter)="mouseoverLogin=true" (mouseleave)="mouseoverLogin=false">
+        <span style="padding-left: 0%; padding-right: 1%;" class="btn" (mouseenter)="mouseoverLogin=true" (mouseleave)="mouseoverLogin=false">
             <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Login</button>
         </span>
         <span>&nbsp;</span>
-        <button  type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+        <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
     </form>
 </div>
