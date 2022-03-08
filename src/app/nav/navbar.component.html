@@ -11,7 +11,8 @@
         <a class="nav-link" href="admin">Admin</a>
       </div>
       <div class="navbar-welcome">
-          <a class="nav-link" href="user/profile">Welcome, Rico</a>
+          <a *ngIf=(loggedIn) class="nav-link" href="user/profile">Welcome, Rico</a>
+          <a style="margin-left: 125%;" *ngIf=(!loggedIn) class="nav-link" href="user/login">Login</a>
       </div>
     </div>
   </div>
