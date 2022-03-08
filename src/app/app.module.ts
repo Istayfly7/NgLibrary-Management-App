@@ -11,7 +11,6 @@ import { LibraryCarouselComponent } from './library/library-dashboard/library-ca
 import { LibraryDashboardComponent } from './library/library.component';
 import { NavBarComponent } from './nav/navbar.component';
 import { appRoutes } from './routes';
-import { UserProfileComponent } from './user/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { UserProfileComponent } from './user/profile.component';
     LibraryCardComponent,
     LibraryCatalogComponent,
     LibraryAdminComponent,
-    CatalogTableComponent,
-    UserProfileComponent
+    CatalogTableComponent
   ],
   imports: [
     BrowserModule,
