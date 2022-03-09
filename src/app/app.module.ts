@@ -11,6 +11,7 @@ import { LibraryCarouselComponent } from './library/library-dashboard/library-ca
 import { LibraryDashboardComponent } from './library/library.component';
 import { NavBarComponent } from './nav/navbar.component';
 import { appRoutes } from './routes';
+import { AuthService } from './user/auth.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { appRoutes } from './routes';
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [LibraryAppComponent]
 })
 export class AppModule { }
