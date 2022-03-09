@@ -8,10 +8,15 @@ export class AuthService {
     loginUser (username: string, password: string){
         this.currentUser = {
             id: 1,
-            firstname: "Rico",
-            lastname: "Porter",
-            username: "istayfly7"
+            firstname: 'Rico',
+            lastname: 'Porter',
+            username: username
         }
+    }
+
+    updateCurrentUser(firstname: string, lastname: string){
+        this.currentUser.firstname = firstname
+        this.currentUser.lastname = lastname
     }
 
     isAuthenticated(){

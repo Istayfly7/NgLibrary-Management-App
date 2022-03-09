@@ -30,7 +30,7 @@ export class LoginComponent {
     login(formValues){
         this.authService.loginUser(formValues.username, formValues.password);
 
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['user/profile']);
     }
 
     cancel(){

@@ -3,23 +3,24 @@
 <div class="flex-container">
     <div class="col-md-5">
         <h5 style="text-align: center;">Account Information</h5>
-        <form class="container-fluid">
+        <form [formGroup]="profileForm" (ngSubmit)="saveProfile(profileForm.value)" autocomplete="off" class="container-fluid">
             <div class="col">
                 <div class="row">
                     <div class="col-md-5">
                         <label for="firstname" class="form-label">First name</label>
-                        <input type="text" class="form-control" id="firstname" value="authService.currentUser.firstname">
+                        <input formControlName="firstname" type="text" class="form-control" id="firstname">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-5">
                         <label for="lastname" class="form-label">Last name</label>
-                        <input type="text" class="form-control" id="lastname" value="Otto">
+                        <input formControlName="lastname" type="text" class="form-control" id="lastname">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 10px;">
                     <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Submit form</button>
+                        <button class="btn btn-primary" type="submit">Save</button>
+                        <button (click)="cancel()" class="btn btn-secondary" type="button">Cancel</button>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@
         <a class="nav-link" href="admin">Admin</a>
       </div>
       <div class="navbar-welcome">
-          <a *ngIf="authService.isAuthenticated()" class="nav-link" href="user/profile">Welcome, Rico</a>
+          <a *ngIf="authService.isAuthenticated()" class="nav-link" href="user/profile">Welcome, {{authService.currentUser.firstname}}</a>
           <a style="margin-left: 125%;" *ngIf="!authService.isAuthenticated()" class="nav-link" href="user/login">Login</a>
       </div>
     </div>
