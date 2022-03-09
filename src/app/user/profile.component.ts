@@ -19,6 +19,21 @@ import { AuthService } from "./auth.service";
             padding-left: 10px;
             padding-right: 5px;
         }
+
+        em {
+            floaat: right;
+            color: #E05C65;
+            padding-left: 50px;
+        }
+
+        .error input {
+            background-color: #E3C3C5;
+        }
+
+        .error ::-web-kit-input-placeholder {color: #999;}
+        .error ::-moz-placeholder {color: #999;}
+        .error :-moz-placeholder {color: #999;}
+        .error :-ms-input-placeholder {color: #999;}
     `]
 })
 export class UserProfileComponent implements OnInit{
@@ -40,6 +55,14 @@ export class UserProfileComponent implements OnInit{
             this.authService.updateCurrentUser(formValues.firstname, formValues.lastname)
             this.router.navigate(['dashboard'])
         }
+    }
+
+    validateFirstName(){
+        return this.profileForm.controls.firstname.valid || this.profileForm.controls.firstname.untouched
+    }
+
+    validateLastName(){
+        return this.profileForm.controls.lastname.valid || this.profileForm.controls.lastname.untouched
     }
 
     cancel() {
