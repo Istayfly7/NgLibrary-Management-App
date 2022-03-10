@@ -1,4 +1,4 @@
-<h3 style="text-align: center;">My Profile</h3>
+<h3 style="padding-right: 20%;">My Profile</h3>
 <hr/>
 <div class="flex-container">
     <div class="col-md-5">
@@ -6,17 +6,17 @@
         <form [formGroup]="profileForm" (ngSubmit)="saveProfile(profileForm.value)" autocomplete="off" class="container-fluid">
             <div class="col">
                 <div class="row">
-                    <div class="col-md-5 form-group" [ngClass]="{'error': !validateFirstName()}">
-                        <label for="firstname" class="form-label">First name</label>
-                        <em *ngIf="!validateFirstName()">Required</em>
-                        <input formControlName="firstname" type="text" class="form-control" id="firstname">
+                    <div class="col-md-5 form-group" [ngClass]="{'error': !validateUserName()}">
+                        <label for="username" class="form-label">Username</label>
+                        <em *ngIf="!validateUserName()">Required</em>
+                        <input formControlName="username" type="text" class="form-control" id="username">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-5 form-group" [ngClass]="{'error': !validateLastName()}">
-                        <label for="lastname" class="form-label">Last name</label>
-                        <em *ngIf="!validateLastName()">Required</em>
-                        <input formControlName="lastname" type="text" class="form-control" id="lastname">
+                    <div class="col-md-5 form-group" [ngClass]="{'error': !validatePassword()}">
+                        <label for="password" class="form-label">Password</label>
+                        <em *ngIf="!validatePassword()">Required</em>
+                        <input formControlName="password" type="text" class="form-control" id="password">
                     </div>
                 </div>
                 <div class="row" style="padding-top: 10px;">

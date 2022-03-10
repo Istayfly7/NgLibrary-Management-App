@@ -1,7 +1,8 @@
 import { Component , OnInit} from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
-import { AuthService } from "./auth.service";
+import { TokenStorageService } from "./services/token-storage.service";
+import { IUser } from "./user.model";
 
 @Component({
     templateUrl: 'profile.component.html',
@@ -38,31 +39,42 @@ import { AuthService } from "./auth.service";
 })
 export class UserProfileComponent implements OnInit{
     profileForm: FormGroup
+    currentUser:IUser
 
-    constructor(private authService: AuthService, private router: Router){}
+    constructor(private token: TokenStorageService, private router: Router){}
 
     ngOnInit(): void {
-        let firstname = new FormControl(this.authService.currentUser.firstname, Validators.required)
-        let lastname = new FormControl(this.authService.currentUser.lastname, Validators.required)
+        this.setCurrentUser(this.token.getUser)
+
+        let username = new FormControl(this.currentUser.username, Validators.required)
+        let password = new FormControl(this.currentUser.password, Validators.required)
         this.profileForm = new FormGroup({
-            firstname: firstname,
-            lastname: lastname
+            username: username,
+            password: password
         })
     }
 
     saveProfile(formValues){
         if(this.profileForm.valid){
-            this.authService.updateCurrentUser(formValues.firstname, formValues.lastname)
+            //*****NOT FINISHED */
+            //this.authService.updateCurrentUser(formValues.firstname, formValues.lastname)
             this.router.navigate(['dashboard'])
         }
     }
 
-    validateFirstName(){
-        return this.profileForm.controls.firstname.valid || this.profileForm.controls.firstname.untouched
+    setCurrentUser(user): void{
+        this.currentUser={
+            username: user.username,
+            password: user.password
+        }
     }
 
-    validateLastName(){
-        return this.profileForm.controls.lastname.valid || this.profileForm.controls.lastname.untouched
+    validateUserName(){
+        return this.profileForm.controls.username.valid || this.profileForm.controls.username.untouched
+    }
+
+    validatePassword(){
+        return this.profileForm.controls.password.valid || this.profileForm.controls.password.untouched
     }
 
     cancel() {

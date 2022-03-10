@@ -11,7 +11,10 @@ import { LibraryCarouselComponent } from './library/library-dashboard/library-ca
 import { LibraryDashboardComponent } from './library/library.component';
 import { NavBarComponent } from './nav/navbar.component';
 import { appRoutes } from './routes';
-import { AuthService } from './user/auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthInterceptor } from './user/helpers/auth.interceptor';
+import { AuthService } from './user/services/auth.service';
+import { TokenStorageService } from './user/services/token-storage.service';
 
 @NgModule({
   declarations: [
@@ -26,10 +29,13 @@ import { AuthService } from './user/auth.service';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    AuthService
+    AuthInterceptor,
+    AuthService,
+    TokenStorageService
   ],
   bootstrap: [LibraryAppComponent]
 })
