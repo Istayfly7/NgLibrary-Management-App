@@ -5,6 +5,7 @@ import { userRoutes } from './user.routes';
 import { UserProfileComponent } from "./profile.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from "./login.component";
+import { RegisterComponent } from "./register.component";
 
 @NgModule({
     imports: [
@@ -15,7 +16,8 @@ import { LoginComponent } from "./login.component";
     ],
     declarations: [
         UserProfileComponent,
-        LoginComponent
+        LoginComponent,
+        RegisterComponent
     ],
     providers: []
 })

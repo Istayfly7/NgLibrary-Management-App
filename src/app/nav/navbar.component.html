@@ -11,8 +11,14 @@
         <a class="nav-link" href="admin">Admin</a>
       </div>
       <div class="navbar-welcome">
-          <a *ngIf="authService.isAuthenticated()" class="nav-link" href="user/profile">Welcome, {{authService.currentUser.firstname}}</a>
-          <a style="margin-left: 125%;" *ngIf="!authService.isAuthenticated()" class="nav-link" href="user/login">Login</a>
+        <div *ngIf="isLoggedIn" style="display: flex;">
+          <a style="padding-right: 50px;" class="nav-link" href="user/profile">Welcome, {{this.username}}</a>
+          <button class="btn btn-secondary btn-sm" (click)="this.logout()">Sign Out</button>
+        </div>
+        <div *ngIf="!isLoggedIn" style="margin-left: 80%; display: flex;">
+          <a class="nav-link" href="user/login">Login</a>
+          <a class="nav-link" href="user/signup">SignUp</a>
+        </div>
       </div>
     </div>
   </div>
